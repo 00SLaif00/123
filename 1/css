@@ -9,12 +9,12 @@ $hue: 223;
 $starHue: 38;
 
 :root {
-	--bg: #{hsl($hue,10%,90%)};
-	--fg: #{hsl($hue,10%,10%)};
-	--primary: #{hsl($hue,90%,55%)};
-	--yellow: #{hsl($starHue,90%,55%)};
-	--yellow-t: #{hsla($starHue,90%,55%,0)};
-	--bezier: cubic-bezier(0.42,0,0.58,1);
+	--bg: #{hsl($hue, 10%, 90%)};
+	--fg: #{hsl($hue, 10%, 10%)};
+	--primary: #{hsl($hue, 90%, 55%)};
+	--yellow: #{hsl($starHue, 90%, 55%)};
+	--yellow-t: #{hsla($starHue, 90%, 55%, 0)};
+	--bezier: cubic-bezier(0.42, 0, 0.58, 1);
 	--trans-dur: 0.3s;
 	font-size: calc(24px + (30 - 24) * (100vw - 320px) / (1280 - 320));
 }
@@ -24,9 +24,7 @@ body {
 	font: 1em/1.5 "DM Sans", sans-serif;
 	display: flex;
 	height: 100vh;
-	transition:
-		background-color var(--trans-dur),
-		color var(--trans-dur);
+	transition: background-color var(--trans-dur), color var(--trans-dur);
 }
 
 .rating {
@@ -69,12 +67,11 @@ body {
 		&-fill {
 			fill: var(--yellow);
 			transform: scale(0);
-			transition:
-				fill var(--trans-dur) var(--bezier),
+			transition: fill var(--trans-dur) var(--bezier),
 				transform var(--trans-dur) var(--bezier);
 		}
 		&-stroke {
-			stroke: hsl($hue,10%,80%);
+			stroke: hsl($hue, 10%, 80%);
 			transition: stroke var(--trans-dur);
 		}
 	}
@@ -153,7 +150,7 @@ body {
 	}
 	// screen reader text
 	&__sr {
-		clip: rect(1px,1px,1px,1px);
+		clip: rect(1px, 1px, 1px, 1px);
 		overflow: hidden;
 		position: absolute;
 		width: 1px;
@@ -164,15 +161,15 @@ body {
 // Dark theme
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bg: #{hsl($hue,10%,10%)};
-		--fg: #{hsl($hue,10%,90%)};
+		--bg: #{hsl($hue, 10%, 10%)};
+		--fg: #{hsl($hue, 10%, 90%)};
 	}
 	.rating {
 		margin: auto;
 
 		&__star {
 			&-stroke {
-				stroke: hsl($hue,10%,30%);
+				stroke: hsl($hue, 10%, 30%);
 			}
 		}
 	}
@@ -200,7 +197,7 @@ body {
 		opacity: 0;
 		r: 16px;
 		stroke-width: 0;
-		transform: scale(1);	
+		transform: scale(1);
 	}
 }
 @keyframes starFill {
