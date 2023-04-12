@@ -1,120 +1,120 @@
-html, body { 
-  
-  margin: 0;
+.testimonial-page {
+  padding: 40px 0px;
+}
+.card-reviews {
+  padding-bottom: 30px;
   height: 100%;
+}
+.test-reviews .card {
+  box-shadow: 0px 5px 16px rgba(223, 241, 223, 0.5);
+  height: 100%;
+  transition: 0.8s;
+  background: rgb(224, 244, 255);
+  margin: 0 auto;
+  box-sizing: border-box;
   overflow: hidden;
-  font-family: 'Roboto' !important; 
-  color: white;
-  font-size: 9px;
+  border-radius: 7px !important;
 }
-
-#magic {
-
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  display: block;
+.test-reviews .card:after {
+  position: absolute;
   top: 0;
-  left: 0;
-  z-index: -9999;
-}
-
-.playground{
-
-  position: fixed;
+  left: -50%;
   width: 100%;
-  height: 100vh;
-  display: block;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-
+  z-index: 9999;
+  height: 100%;
+  pointer-events: none;
 }
-.bottomPosition{
-
-  text-align: center;
-  margin-bottom: 50px;
-  
-}
-.minText{
-  
+.test-reviews .description {
   font-size: 14px;
+  hyphens: none;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.test-reviews .card-title img {
+  z-index: 99999 !important;
+}
+.test-reviews .card .layer {
+  position: absolute;
+  top: calc(100% - 5px);
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #1daeff,
+    #169eef,
+    #0f8fde,
+    #0780cd,
+    #0071bd
+  );
+  left: 0;
+  z-index: 1;
+  transition: 0.5s;
+}
+.test-reviews .card:hover {
+  cursor: pointer;
+  box-shadow: -5px 50px 100px rgba(223, 241, 223, 0.5);
 }
 
-a {
-  color: white;
-  font-size: 12px;
-  text-decoration: none;
+.test-reviews .card:hover hr {
+  background-color: #fff;
+}
+.test-reviews .card:hover .layer {
+  top: 0;
+}
+.test-reviews .card .content {
+  position: relative;
+  z-index: 2;
 }
 
-.logo {
-    width: 50px;
-    height: 50px;
+.test-reviews .card .content .img-1 {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto 0px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white !important;
 }
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+.test-reviews .card .content .img-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-/* cyrillic */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+.test-reviews hr {
+  background-color: rgb(117, 117, 117);
+  width: 80% !important;
+  transition: 1s;
 }
-/* greek-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
+
+.test-reviews .card-bottoms {
+  text-align: center;
+  padding: 0px 20px 25px;
 }
-/* greek */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
+.test-reviews .card-bottoms .user-name {
+  font-size: 20px;
+  color: #0071bd;
+  margin-bottom: 10px;
+  font-family: "mulibold";
 }
-/* vietnamese */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+.test-reviews .card:hover .description,
+.test-reviews .card:hover .card-bottoms .user-name {
+  color: #fff;
 }
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+
+.card-reviews .owl-user-imgs {
+  padding: 10px 10px 20px;
 }
-/* latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.card-reviews .owl-user-imgs .user-upload-img {
+  width: 60px;
+  border-radius: 5px;
+  height: 60px;
+  margin: 0px auto;
 }
+.card-reviews .owl-user-imgs .user-upload-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.owl-user-imgs{display:flex;}
